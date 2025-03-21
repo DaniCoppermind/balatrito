@@ -13,6 +13,7 @@
   <body>
     <audio id="balatrito" src="salebalatrito.mp3"></audio>
     <div class="container">
+      <button class="big-button" onclick="playAudio()">Balatro?</button>
       <h1 class="azul">Sale Balatrito?</h1>
       <p class="verde">Sale Balatrito?</p>
       <img src="salebalatrito.jpg" alt="Sale Balatrito?" />
@@ -199,12 +200,12 @@
       <p class="purpura">Sale Balatrito?</p>
     </div>
     <script>
-      window.addEventListener('load', function () {
-        var audio = document.getElementById('balatrito')
+      function playAudio() {
+        const audio = document.getElementById('balatrito')
         audio.play().catch(function (error) {
-          console.log('Reproducción automática bloqueada:', error)
+          console.log('Error al reproducir el audio:', error)
         })
-      })
+      }
     </script>
   </body>
 </html>
