@@ -11,6 +11,7 @@
     <title>Sale Balatrito?</title>
   </head>
   <body>
+    <audio id="balatrito" src="salebalatrito.mp3"></audio>
     <div class="container">
       <h1 class="azul">Sale Balatrito?</h1>
       <p class="verde">Sale Balatrito?</p>
@@ -197,9 +198,13 @@
       <p class="amarillo">Sale Balatrito?</p>
       <p class="purpura">Sale Balatrito?</p>
     </div>
-    <audio autoplay>
-      <source src="balatrito.mp3" />
-    </audio>
-    <script src="code.js"></script>
+    <script>
+      window.addEventListener('load', function () {
+        var audio = document.getElementById('balatrito')
+        audio.play().catch(function (error) {
+          console.log('Reproducción automática bloqueada:', error)
+        })
+      })
+    </script>
   </body>
 </html>
